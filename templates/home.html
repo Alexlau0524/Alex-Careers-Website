@@ -16,7 +16,7 @@
     
   <body>
       <div class="container">
-        <h1 class="text-center mt=2 mb-4">Alex's Career</h1>
+        <h1 class="text-center mt=2 mb-4">{{company_name}}'s Career</h1>
         <img class="img-fluid" id="banner" src="https://0b36d2d8-4292-4fbe-8a58-51e1c2ddf259-00-3o5g6exhrxylz.sisko.replit.dev/static/Banner.jpeg">
         <h2 class="text-center mt=2 mb-4">About Us</h2>
         <p class="lead">Welcome to Alex's Career – Your Gateway to Career Success!</p>
@@ -27,8 +27,11 @@
         </h3>
         <p class="lead">Our mission is to bridge the gap between talented professionals and dynamic organizations, fostering mutually beneficial connections that propel careers forward. We are dedicated to providing a user-friendly, transparent, and personalized platform that transforms the job-seeking process into an inspiring and rewarding adventure.</p>
         <h2 class="text-center mt=2 mb-4">Open Positions</h2>
-        <p>TODO - Show the jobs here</p>
-      </div>
+        <div>
+          {% for job in jobs %}
+           {% include 'jobitem.html'%}
+          {% endfor %}
+        </div>
       <div style="text-align: center;">
         <button class="btn btn-primary">Contact Us</button>
         <p class="mt-4">Copyright 2024 Alex</p>
