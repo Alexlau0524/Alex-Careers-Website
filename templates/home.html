@@ -10,18 +10,26 @@
         height: 360px;
         width: 100%;
         object-fit: cover;
+        margin-bottom: 16px;
       }
     </style>
   </head>
     
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://0b36d2d8-4292-4fbe-8a58-51e1c2ddf259-00-3o5g6exhrxylz.sisko.replit.dev/static/Banner.jpeg">
       <div class="container">
-        <h1 class="text-center mt=2 mb-4">{{company_name}}'s Career</h1>
-        <img class="img-fluid" id="banner" src="https://0b36d2d8-4292-4fbe-8a58-51e1c2ddf259-00-3o5g6exhrxylz.sisko.replit.dev/static/Banner.jpeg">
+        <h1 class="text-center mt-2 mb-4">{{company_name}}'s Career</h1>
         <h2 class="text-center mt=2 mb-4">About Us</h2>
+        <div class="row" style="margin: bottom:16px">
+          <div class="col-md-6">
         <p class="lead">Welcome to Alex's Career – Your Gateway to Career Success!</p>
         <br>
         <p class="lead">At Alex's Career, we understand that your career is more than just a job; it's a journey of growth, learning, and fulfillment. Our platform is designed to be your trusted companion in this journey, connecting you with the opportunities that align with your skills, aspirations, and values.</p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+              <img src="/static/people.jpg" style="height:320px">
+          </div>
         <h3>
            <small class="text-body-secondary">Our Mission</small>
         </h3>
@@ -33,8 +41,8 @@
           {% endfor %}
         </div>
       <div style="text-align: center;">
-        <button class="btn btn-primary">Contact Us</button>
-        <p class="mt-4">Copyright 2024, Alex</p>
+        <a href="mailto:alexlau0524@gmail.com?subject=Questions%20about%20Job%20Openings&body=My%20Name%3A%0D%0A%0D%0AMy%20Questions%3A" type="button" class="btn btn-primary">Contact Us</a>
       </div>
+    {% include 'footer.html' %}
   </body>
 </html>
